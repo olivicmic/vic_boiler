@@ -1,0 +1,27 @@
+// bower:scss
+// endbower
+
+@import "compass/css3";
+@import "compass/reset";
+@import "breakpoint-sass/stylesheets/_breakpoint.scss";
+
+/* SAMPLES
+@include transition(.25s all ease-in-out);
+@include flex-shrink(0);
+@include breakpoint(max-width 1790px){}
+@include flexbox((
+	display: inline-flex,
+	flex-direction: row
+));
+*/
+
+
+.fade-in-out {	
+	@include transition(.25s all ease-in-out);
+	&.ng-hide-add,
+	&.ng-hide-remove,
+	&.ng-hide {@include transition(.25s all ease-in-out);}
+	&.ng-hide {opacity: 0};
+}
+
+.no-scroll {overflow:hidden;}
